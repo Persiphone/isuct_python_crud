@@ -1,0 +1,40 @@
+{% include 'layouts/header.html' %}
+    <div class="container mt-5">
+        <div class="d-flex align-items-center justify-content-between">
+            <h1>{{ title }}</h1>
+            <a class="btn btn-success" href="/book/create">Создать новую книгу</a>
+        </div>
+        <table class="table mt-3">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Isbn</th>
+              <th scope="col">Name</th>
+              <th scope="col">Author</th>
+              <th scope="col">Pages</th>
+              <th scope="col">Year</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+                {% for item in books -%}
+                    <tr>
+                        <td>{{ item.id }}</td>
+                        <td>{{ item.isbn }}</td>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.author }}</td>
+                        <td>{{ item.pages }}</td>
+                        <td>{{ item.year }}</td>
+                        <td class="d-flex" style="flex-direction: column">
+                            <a class="btn btn-sm btn-primary mt-2" href="/book/{{ item.id }}">Посмотреть книгу</a>
+                            <a class="btn btn-sm btn-success mt-2" href="/book/update/{{ item.id }}">Изменить книгу</a>
+                            <form class="mt-2 w-100" action="/book/delete/{{ item.id }}" method="POST">
+                                <button class="btn btn-sm btn-danger w-100">Удалить книгу</button>
+                            </form>
+                        </td>
+                    </tr>
+                {%- endfor %}
+          </tbody>
+        </table>
+    </div>
+{% include 'layouts/footer.html' %}

@@ -1,0 +1,31 @@
+{% include 'layouts/header.html' %}
+    <div class="container mt-5">
+        <div class="d-flex align-items-center justify-content-between">
+            <h1>{{ title }}</h1>
+            <a class="btn btn-success" href="/books">Список всех книг</a>
+        </div>
+        <form action="/book" method="POST">
+            <div class="mb-3">
+                <label for="isbn" class="form-label">Isbn</label>
+                <input type="text" class="form-control" id="isbn" name="isbn" placeholder="isbn">
+            </div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+            </div>
+            <div class="mb-3">
+                <label for="author" class="form-label">Author</label>
+                <input type="text" class="form-control" id="author" name="author" placeholder="Author">
+            </div>
+            <div class="mb-3">
+                <label for="pages" class="form-label">Pages</label>
+                <input type="number" class="form-control" id="pages" name="pages" placeholder="Pages">
+            </div>
+            <div class="mb-3">
+                <label for="year" class="form-label">Year</label>
+                <input type="number" class="form-control" id="year" name="year" placeholder="Year">
+            </div>
+            <button class="btn btn-success" type="submit">Сохранить</button>
+        </form>
+    </div>
+{% include 'layouts/footer.html' %}

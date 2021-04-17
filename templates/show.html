@@ -1,0 +1,15 @@
+{% include 'layouts/header.html' %}
+    <div class="container">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{ book.name }}</h5>
+            <p class="card-subtitle mb-2 text-muted">Isbn: {{ book.isbn }}</p>
+            <p class="card-subtitle mb-2 text-muted">Автор: {{ book.author }}</p>
+            <p class="card-subtitle mb-2 text-muted">Кол-во страниц: {{ book.pages }}</p>
+            <p class="card-subtitle mb-2 text-muted">Год написания: {{ book.year }}</p>
+            <a href="/book/edit/{{ book.id }}" class="card-link">Изменить книгу</a>
+            <a href="/books" class="card-link">К списку книг</a>
+          </div>
+        </div>
+    </div>
+{% include 'layouts/footer.html' %}
