@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/CRUD for python.iml" filepath="$PROJECT_DIR$/.idea/CRUD for python.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/isuct_python_crud.iml" filepath="$PROJECT_DIR$/.idea/isuct_python_crud.iml" />
     </modules>
   </component>
 </project>
