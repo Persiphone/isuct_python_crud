@@ -3,7 +3,7 @@ from models import db, BooksModel
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://isuct_crud_1:PASS_word@localhost:5432/isuct_crud_1"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://sergey:98432412@localhost:5432/books"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app)
